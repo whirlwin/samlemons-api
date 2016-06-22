@@ -3,7 +3,7 @@ const hal = require('hal');
 
 const router  = express.Router();
 
-router.get('/health-services', (req, res) => {
+router.get('/dentist-services', (req, res) => {
     res.sendStatus(200);
 });
 

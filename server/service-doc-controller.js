@@ -5,7 +5,7 @@ const router  = express.Router();
 
 router.get('/', (req, res) => {
     const resource = new hal.Resource();
-    resource.link('healthServices', '/health-services');
+    resource.link('dentistServices', '/dentist-services');
     res.send(resource);
 });
 
