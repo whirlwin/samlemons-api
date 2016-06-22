@@ -4,12 +4,22 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "node ./bin/samlemons-api",
+    "start:heroku": "node ./bin/samlemons-api",
+    "start:local": "nodemon ./bin/samlemons-api",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "engines": {
     "node": "6.2.1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "4.13.4",
+    "hal": "^0.1.0",
+    "winston": "2.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "1.9.1"
+  }
 }
