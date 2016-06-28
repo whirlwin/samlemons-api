@@ -1,13 +1,13 @@
-const RouterConfig = require('./config/router-config');
 const ExpressConfig = require('./config/express-config');
-const SettingsResolver = require('./settings/settings-resolver');
+const HttpConfig = require('./config/http-config');
+const RouterConfig = require('./config/router-config');
 const WinstonConfig = require('./config/winston-config');
 
 class App {
 
     constructor() {
         this.expressConfig = new ExpressConfig();
-        this.settingsResolver = new SettingsResolver();
+        this.httpConfig = new HttpConfig();
         this.winstonConfig = new WinstonConfig();
         this.routerConfig = new RouterConfig();
     }
@@ -19,7 +19,7 @@ class App {
     }
 
     start() {
-        const httpPort = this.settingsResolver.getHttpPort();
+        const httpPort = this.httpConfig.getHttpPort();
         this.app.listen(httpPort, () => this.winston.info(`App started on port ${httpPort}`));
     }
 }
