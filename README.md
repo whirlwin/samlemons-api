@@ -14,7 +14,7 @@ $ npm install
 export HTTP_PORT=3001
 ```
 
-Here is an extensive list of env variables
+````Here is an extensive list of env variables
 
 - HTTP_PORT (*optional*)
 
@@ -24,5 +24,5 @@ Here is an extensive list of env variables
 $ npm run start:local
 ```
 
-4. Inspect the service document at [localhost:3000](http://localhost:3000)
+4. Inspect the service document at [localhost:4000](http://localhost:4000)
 

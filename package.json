@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "nodemon ./bin/samlemons-api",
     "start": "node ./bin/samlemons-api",
     "start:heroku": "node ./bin/samlemons-api",
-    "start:local": "nodemon ./bin/samlemons-api",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "engines": {
@@ -15,6 +15,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.15.2",
     "express": "4.13.4",
     "hal": "^0.1.0",
     "winston": "2.2.0"

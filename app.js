@@ -1,6 +1,6 @@
 const ExpressConfig = require('./config/express-config');
 const HttpConfig = require('./config/http-config');
-const RouterConfig = require('./config/router-config');
+const Router = require('./server/router')
 const WinstonConfig = require('./config/winston-config');
 
 class App {
@@ -8,14 +8,14 @@ class App {
     constructor() {
         this.expressConfig = new ExpressConfig();
         this.httpConfig = new HttpConfig();
+        this.router = new Router();
         this.winstonConfig = new WinstonConfig();
-        this.routerConfig = new RouterConfig();
     }
 
     configure() {
         this.app = this.expressConfig.configure();
         this.winston = this.winstonConfig.configure();
-        this.routerConfig.configure(this.app);
+        this.router.route(this.app);
     }
 
     start() {
